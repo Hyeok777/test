@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미래 이익 지향성 프로그램</title>
+    
+    <script>
+        // 합산 결과를 저장할 배열
+        let results = [];
+
+        function addNumbers() {
+            // 각 입력 필드에서 값을 가져옵니다.
+            let vegetable = document.getElementById('vegetable').value;
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+            let num3 = parseFloat(document.getElementById('num3').value);
+            let num4 = parseFloat(document.getElementById('num4').value);
+
+            // 숫자 네 개를 더합니다.
+            let sum = num1 * num2 / num3 - num4;
+
+            // 결과를 배열에 저장합니다.
+            results.push({ vegetable: vegetable, sum: sum });
+
+            // 결과를 화면에 출력합니다.
+            let resultElement = document.getElementById('result');
+            resultElement.innerHTML = '이득정도: ' + sum + ' (' + vegetable + ')';
+
+            // 저장된 결과를 화면에 출력합니다.
+            displayResults();
+        }
+
+        function displayResults() {
+            let resultsElement = document.getElementById('results');
+            resultsElement.innerHTML = '<h3>모든 결과들:</h3>';
+            results.forEach((result, index) => {
+                resultsElement.innerHTML += `<p>${index + 1}: ${result.sum} (${result.vegetable})</p>`;
+            });
+        }
+    </script>
+</head>
+<body>
+    
+    <container id="container">
+    <h1>미래 이익 지향성 프로그램</h1>
+    
+    <form onsubmit="event.preventDefault(); addNumbers();">
+        <label for="vegetable">계산할 채소 이름:</label>
+        <input type="text" id="vegetable" required><br><br>
+        <label for="num1">예측 시세:</label>
+        <input type="number" id="num1" required><br><br>
+        <label for="num2">전체 면적량:</label>
+        <input type="number" id="num2" required><br><br>
+        <label for="num3">재배하는데 걸리는 날짜수:</label>
+        <input type="number" id="num3" required><br><br>
+        <label for="num4">초기비용:</label>
+        <input type="number" id="num4" required><br><br>
+        <button type="submit">이득정도 보기</button>
+    </form>
+    <container id="container2">
+    <container id="container3">
+        <img id="me" src=".vscode\forfun.jpg">
+        <img id="you" src=".vscode\msk.jpg">
+
+    </container>
+    
+    <h2 id="result">이득정도: </h2>
+    <div id="results">
+        <h3>모든 결과들:</h3>
+    </div>
+    </container>
+    <container id="container4">
+        <h4> @contact: Lee-jin-hyeok</h4>
+        <a href="https://www.instagram.com/wlsgurrr/"><img id="insta"src="https://png.pngtree.com/png-vector/20230225/ourmid/pngtree-instagram-icon-png-image_6618440.png" title="hello~"></a>
+        <a href="https://github.com/Hyeok777"><img id="insta"src="https://static-00.iconduck.com/assets.00/github-icon-2048x1988-jzvzcf2t.png"></a>
+    </container>
+</container>
+
+
+</body>
+
+</html>
