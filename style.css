@@ -3,12 +3,14 @@ body{
     display: flex;
     background-color: black;
     justify-content: center;
+    align-items: center;
     margin-top: 100px;
 }
 body h1{
-    margin-bottom:50px;
+    display:flex;
+    justify-content:center;
     color:white;
-   padding: 20px;
+    padding:20px;
     border-color:aqua;
     border-style:outset;
     border-radius: 15px;
@@ -17,8 +19,21 @@ body h1{
     color:white;
     font-style: italic;
 }
+form{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+form label{
+   font-family:Arial, Helvetica, sans-serif;
+   font-size: 20px;
+   font-weight: bold;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 form button{
-    margin-left: 155px;
+    
     background: none;
     border:2px solid aquamarine;
     color: white;
@@ -71,7 +86,7 @@ body form{
     border-radius: 15px;
 }
 #me{
-    width: 100px;
+    width: 120px;
 }
 #you{
     width:120px;
